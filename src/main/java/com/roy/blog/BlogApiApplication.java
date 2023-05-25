@@ -10,6 +10,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 import com.roy.blog.config.AppConstants;
 import com.roy.blog.models.Role;
@@ -17,6 +18,7 @@ import com.roy.blog.repositories.RoleRepo;
 
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
 
+@EnableAsync
 @EnableAdminServer
 @SpringBootApplication
 public class BlogApiApplication implements CommandLineRunner {
